@@ -4,30 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time-table and To-do List</title>
+    <link rel="icon" type="image/png" href="NJS.png">
     <style>
         body {
-            font-family: Georgia, serif;
+            font-family: Arial, sans-serif;
             background: #edf2f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
         }
 
         .container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: flex-start;
             margin: 20px auto;
             max-width: 800px;
+            padding: 20px;
+            flex-wrap: wrap;
         }
 
-        .time-table, .to-do-list {
-            flex: 1;
+        .time-table, .to-do-list, .daily-routine {
+            flex-basis: calc(50% - 20px); 
             margin-right: 20px;
+            margin-bottom: 20px;
             padding: 20px;
-            border: 1px solid black;
+            border: 1px solid #2B2D42;
             border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
             margin-top: 0;
+            color: #2B2D42;
         }
 
         table {
@@ -36,29 +46,47 @@
         }
 
         table th, table td {
-            padding: 8px;
-            border-bottom: 1px solid black;
+            padding: 10px;
+            border-bottom: 1px solid #2B2D42;
         }
 
         table th {
             text-align: left;
+            color: #2B2D42;
         }
 
-        .to-do-list ul {
+        input[type="date"], input[type="time"], input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #2B2D42;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1D1F2A;
+        }
+
+        .to-do-list ul, .daily-routine ul {
             padding: 0;
             list-style-type: none;
+            margin-top: 10px;
         }
 
-        .to-do-list li {
+        .to-do-list li, .daily-routine li {
             margin-bottom: 10px;
-        }
-
-        .time-table .additional-rows {
-            display: none;
-        }
-
-        .time-table .additional-rows {
-            display: table-row-group;
+            color: #333;
         }
 
         .back-button {
@@ -71,6 +99,7 @@
             text-decoration: none;
             border-radius: 5px;
             z-index: 1000;
+            transition: background-color 0.3s ease;
         }
         .back-button:hover {
             background-color: #1D1F2A;
@@ -111,11 +140,24 @@
                 <input type="submit" value="Add Task">
             </form>
             <ul id="todo-list">
+                <li>Complete assignment</li>
+                <li>Buy groceries</li>
+                <li>Call mom</li>
+            </ul>
+        </div>
+        <div class="daily-routine">
+            <h2>Daily Routine</h2>
+            <ul>
+                <li><input type="checkbox" id="healthy"> Journal</li>
+                <li><input type="checkbox" id="academic"> School work</li>
+                <li><input type="checkbox" id="academic"> Study/Homework</li>
+                <li><input type="checkbox" id="academic"> Exercise (go for a run or do yoga)</li>
+                <li><input type="checkbox" id="academic"> Screen Time Limit</li>
+                <li><input type="checkbox" id="academic"> Rest</li>
+                <li><input type="checkbox" id="academic"> Art/Book therapy</li>
+                <li><input type="checkbox" id="academic"> Eaten Healthy Meals</li>
             </ul>
         </div>
     </div>
 </body>
 </html>
-
-
-

@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Self-Improvement</title>
+  <link rel="icon" type="image/png" href="NJS.png">
   <style>
         body {
             margin: 0;
@@ -113,7 +114,15 @@
             font-size: 40px;
             margin-bottom: 20px;
         }
-
+        .learnmore a {
+            background: #2B2D42;
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
         .learnmore a:hover {
             opacity: 0.8;
         }
@@ -191,7 +200,6 @@
         footer {
             width: 100%;
             position: relative;
-            top: 150px;
             background-color: #333;
             color: #fff;
             font-family: Arial, sans-serif;
@@ -218,12 +226,16 @@
             list-style: none;
             padding: 0;
             margin-bottom: 20px;
+            display: flex;
+    justify-content: center;
         }
 
         .footer-section li {
             margin-bottom: 5px;
         }
-
+        .footer-section li {
+    margin: 0 10px; 
+}
         .footer-section input[type="text"],
         .footer-section input[type="submit"] {
             width: 100%;
@@ -269,15 +281,15 @@
         .copy-right {
             font-size: 20px;
             margin-top: 20px;
-            margin-left: 190px;
+            margin-left: 50px;
         }
-
         @media (max-width: 768px) {
             .footer-section {
                 flex-basis: 100%;
                 margin-bottom: 20px;
             }
         }
+
   </style>
 </head>
 <body>
@@ -290,11 +302,11 @@
       <li class="li"><a href="aboutus1.html">About Us</a></li>
       <li class="li"><a href="pblcontact.html">Contact</a></li>
       <li class="dropdown li" >
-        <a href="nsi.html" class="active">Self-Improvement</a>
+        <a href="nsi.html" class="active">More</a>
         <div class="dropdown-content">
-          <a href="motivation.html">Motivation</a>
+          <a href="nsi.html">Self-Improvement</a>
           <a href="recommendPBL.html">Recommend</a>
-          <a href="credit.html">Credits</a>
+          <a href="credit.html">References</a>
         </div></div>
       </li>
     </ul>
@@ -328,7 +340,7 @@
     </ol>
   
     <h2 id="books">Book Recommendations</h2>
-    <p>Check out some <a href="recommendPBL.html">recommended books for self-improvement:</a></p>
+    <p class="learnmore">Check out some <a href="recommendPBL.html">Recommended books for Self-Improvement</a></p>
     <div class="recommendation">
       <a href="recommendPBL.html"><img src="Img12.png" alt="Image" width="400"></a>
       <p>"Reading can help a lot!"</p>
@@ -340,7 +352,7 @@
       <div class="element">
         <h2>Online Journal</h2>
         <a href="oj.html"><img src="slazzer-edit-image.png" alt="Our Online Journal" width="450"></a>
-        <p>Check out our <a href="oj.html">Online Journal</a></p>
+        <p class="learnmore">Check out our <a href="oj.html">Online Journal</a></p>
       </div>
     </div>
   
@@ -348,7 +360,7 @@
       <div class="element">
         <h2>Spotify Playlist</h2>
         <a href="https://open.spotify.com/playlist/0omoSXAevjfIlwjbrVf9hu?si=b827558481894b17"><img src="spotify1.png" width="400" height="380"></a>
-        <p>Listen to our <a href="https://open.spotify.com/playlist/0omoSXAevjfIlwjbrVf9hu?si=b827558481894b17">Spotify Playlist</a></p>
+        <p class="learnmore">Listen to our <a href="https://open.spotify.com/playlist/0omoSXAevjfIlwjbrVf9hu?si=b827558481894b17">Spotify Playlist</a></p>
       </div>
     </div>
   
@@ -356,7 +368,7 @@
       <div class="element">
         <h2>Timetable</h2>
         <a href="tttd.html"><img src="Img9.png" alt="Timetable" width="400"></a>
-        <p>Click the image to check out our <a href="tttd.html">Timetable</a></p>
+        <p class="learnmore">Click the image to check out our <a href="tttd.html">Timetable</a></p>
       </div>
     </div>
   
@@ -365,7 +377,7 @@
 
         <h2>To-Do List</h2>
         <a href="tttd.html"><img src="Img13.png" alt="To-Do List" width="400"></a>
-        <p>Click the image to check out our <a href="tttd.html">To-Do List</a></p>
+        <p class="learnmore">Click the image to check out our <a href="tttd.html">To-Do List</a></p>
       </div>
     </div>
   </div>
@@ -382,6 +394,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="pblcontact.html">Contact</a></li>
+                <li><a href="pblcontact.html">Reference</a></li>
             </ul>
         </div>
         <div class="social-icons">
